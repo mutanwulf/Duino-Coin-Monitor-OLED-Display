@@ -36,7 +36,7 @@ const String ducoUser = "YOUR_DUINO_USERNAME"; // Change this to your Duino-Coin
 # Wiring:
 Change SDA and SCL accordingly with your board, this example with Wemos D1 Mini and DevKit V1
 
-|| ESP8266 | ESP32 | OLED |
+|| ESP8266(Wemos) | ESP32 | OLED |
 |:-:| :----: | :----: | :-----: |
 ||3.3V | 3.3V | VCC |
 ||GND | GND | GND |
@@ -53,5 +53,7 @@ Dont be confuse with OLED screen size, there are two common size :
 
 **if you having difficulty on ESP8266 pin reset D4, replace it with -1
 
-<br>
-<a href="https://www.buymeacoffee.com/tsulis" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+# Tips on Linux:
+If you get the error that you have no access to port /dev/ttyUSB? than change temporary you permission with:
+  `sudo chown <username>:<group> /dev/ttyUSB2
+change <username> and <group> to yours (mostly group: dialout or uucp)
