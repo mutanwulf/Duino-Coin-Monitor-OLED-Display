@@ -60,4 +60,4 @@ If you get the error that you have no access to port /dev/ttyUSB? than change te
 sudo chown <username>:<group> /dev/ttyUSB2
 ```
 
-change <username> and <group> to yours (mostly group: dialout or uucp)
+change < username > and < group > to yours (mostly group: dialout or uucp)
