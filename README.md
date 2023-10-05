@@ -55,5 +55,8 @@ Dont be confuse with OLED screen size, there are two common size :
 
 # Tips on Linux:
 If you get the error that you have no access to port /dev/ttyUSB? than change temporary you permission with:
-  `sudo chown <username>:<group> /dev/ttyUSB2
+```
+sudo chown <username>:<group> /dev/ttyUSB2
+```
+
 change <username> and <group> to yours (mostly group: dialout or uucp)
