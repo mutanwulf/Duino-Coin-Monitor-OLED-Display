@@ -34,14 +34,15 @@
     - use 1 for ESP01 using
     - use 0 for nomal Dev Board like WemosD1 or simular
 
-5. WiFi and Duino User
+4. WiFi and Duino User
 ```
 const char *ssid = "YOUR_SSID"; // Change this to your WiFi SSID
 const char *password = "YOUR_SSID_PASSWORD"; // Change this to your WiFi password
 const String ducoUser = "YOUR_DUINO_USERNAME"; // Change this to your Duino-Coin username
 ```
+
 # Wiring:
-Change SDA and SCL accordingly with your board, this example with Wemos D1 Mini and DevKit V1
+Change SDA and SCL accordingly with your board, this example with Wemos D1 Mini, ESP01 and DevKit V1
 
 || ESP8266(Wemos) | ESP01 | ESP32 | OLED |
 |:-:| :----: | :----: | :----: | :-----: |
