@@ -24,10 +24,19 @@
  */
 #define SCREEN_ADDRESS 0x3C
 
+/*
+ * ACTIVATE THIS IF YOU USE ESP01 
+ */
+//#define USEESP01 1
+
 #if ESP8266
 #include <ESP8266HTTPClient.h>
 #include <ESP8266WiFi.h> 
+#ifdef USESP01
+#define OLED_RESET     1
+#else
 #define OLED_RESET     D4
+#endif
 #endif
 
 #if ESP32
@@ -44,7 +53,7 @@ const String ducoUser = "YOUR_DUINO_USERNAME"; // Change this to your Duino-Coin
 
 const String ducoReportJsonUrl = "https://server.duinocoin.com/v2/users/" + ducoUser + "?limit=1";
 
-const int run_in_ms = 5000;
+const int run_in_ms = 10000;
 
 float lastAverageHash = 0.0;
 float lastTotalHash = 0.0;
@@ -54,6 +63,10 @@ void setup() {
 
     Serial.begin(115200);
     setupWifi();
+    
+    if (USEESP01==1){
+      Wire.begin(2,0);
+    }
 
     initDisplayOled();
 
