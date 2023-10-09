@@ -31,8 +31,8 @@
 ```
 #define USEESP01 0
 ```
-   - use 1 for ESP01 using
-   - use 0 for nomal Dev Board like WemosD1 or simular
+    - use 1 for ESP01 using
+    - use 0 for nomal Dev Board like WemosD1 or simular
 
 5. WiFi and Duino User
 ```
