@@ -50,6 +50,11 @@ Change SDA and SCL accordingly with your board, this example with Wemos D1 Mini 
 |`SCL`|D1 (GPIO5) | GPIO0 | GPIO22| SCL |
 |`SDA`|D2 (GPIO4) | GPIO2 | GPIO21 | SDA |
 
+# Update :
+I added here support for ESP01. Also in resources folder are the wiring.
+
+<img src="resources/ESP01-OLED_Stecker.png" alt="ESP01.jpg" width="70%">
+
 # Else :
 Feel free to modify, optimize and/or add yours. 
 
