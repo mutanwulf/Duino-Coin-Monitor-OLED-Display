@@ -27,7 +27,14 @@
     - use 0x3D if screen resolution 128x64 pixel
     - use 0x3C if screen resolution 128x32 pixel
 
-3. WiFi and Duino User
+3. USEESP01
+```
+#define USEESP01 0
+```
+   - use 1 for ESP01 using
+   - use 0 for nomal Dev Board like WemosD1 or simular
+
+5. WiFi and Duino User
 ```
 const char *ssid = "YOUR_SSID"; // Change this to your WiFi SSID
 const char *password = "YOUR_SSID_PASSWORD"; // Change this to your WiFi password
@@ -36,12 +43,12 @@ const String ducoUser = "YOUR_DUINO_USERNAME"; // Change this to your Duino-Coin
 # Wiring:
 Change SDA and SCL accordingly with your board, this example with Wemos D1 Mini and DevKit V1
 
-|| ESP8266(Wemos) | ESP32 | OLED |
-|:-:| :----: | :----: | :-----: |
-||3.3V | 3.3V | VCC |
-||GND | GND | GND |
-|`SCL`|D1 (GPIO5) | GPIO22| SCL |
-|`SDA`|D2 (GPIO4) | GPIO21 | SDA |
+|| ESP8266(Wemos) | ESP01 | ESP32 | OLED |
+|:-:| :----: | :----: | :----: | :-----: |
+||3.3V | 3.3V | 3.3V | VCC |
+||GND | GND | GND | GND |
+|`SCL`|D1 (GPIO5) | GPIO0 | GPIO22| SCL |
+|`SDA`|D2 (GPIO4) | GPIO2 | GPIO21 | SDA |
 
 # Else :
 Feel free to modify, optimize and/or add yours. 
@@ -51,7 +58,7 @@ Dont be confuse with OLED screen size, there are two common size :
    - OLED 1.3" Display (128x64)
    - OLED 0.96" Display (128x32)
 
-**if you having difficulty on ESP8266 pin reset D4, replace it with -1
+**if you having difficulty on ESP8266 pin reset D4, replace it with -1, for ESP01 use 1 (in new code setup USEESP01 to 1)
 
 # Tips on Linux:
 If you get the error that you have no access to port /dev/ttyUSB? than change temporary you permission with:
