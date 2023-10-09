@@ -25,14 +25,14 @@
 #define SCREEN_ADDRESS 0x3C
 
 /*
- * ACTIVATE THIS IF YOU USE ESP01 
+ * CHANGE THIS IF YOU USE ESP01 to 1
  */
-//#define USEESP01 1
+#define USEESP01 0
 
 #if ESP8266
 #include <ESP8266HTTPClient.h>
 #include <ESP8266WiFi.h> 
-#ifdef USESP01
+#if (USESP01 >= 0)
 #define OLED_RESET     1
 #else
 #define OLED_RESET     D4
@@ -64,7 +64,7 @@ void setup() {
     Serial.begin(115200);
     setupWifi();
     
-    if (USEESP01==1){
+    if (USEESP01 >= 0){
       Wire.begin(2,0);
     }
 
